@@ -1,0 +1,362 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+html
+	box-sizing: border-box
+
+*
+	box-sizing: inherit
+
+html, body
+	height: 100%
+
+body
+	font-family: $default-font
+	font-size: 16px
+	line-height: 1.5
+	color: #000
+	width: 100%
+	overflow-x: hidden
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+.clearfix::after
+	content: ""
+	display: table
+	clear: both
+
+.container
+	max-width: 960px
+	width: 100%
+	margin: 0 auto
+	padding: 0 10px
+
+.main-header
+	min-height: 650px
+	background-color: #4eacdd
+	background-image: url("../img/header-mobile.png")
+	background-repeat: no-repeat
+	background-position: 33% 220%
+	&__logo
+		float: left
+	&__header
+		margin-bottom: 58px
+
+
+.header-logo
+	width: 100px
+	height: 100px
+	background-color: #fff
+	font-size: 50px
+	color: #0da9e5
+	text-align: center
+	line-height: 100px
+	box-shadow: 0 4px 0 #0da9e5, 14px 14px 0 #26b0e6
+
+.header-nav
+	&__aside-menu
+		font-size: 30px
+		float: right
+		color: #fff
+
+.mmenu
+	position: relative
+	&__link
+		text-align: center
+		&:hover
+			background-color: #fff
+	&__close
+		position: absolute
+		top: 0
+		left: -30px
+		color: #fff
+		font-size: 30px
+
+.header-nav__aside-menu
+	margin-top: 34px
+
+.header-text
+	text-align: right
+	&__title
+		display: inline-block
+		vertical-align: top
+		margin: 0
+			bottom: 40px
+	&__description
+		margin: 0
+		font-weight: 300
+		color: #fff
+		font-size: 34px
+		line-height: 46px
+		letter-spacing: -1px
+		margin-bottom: 40px
+		&_accent
+			font-weight: 700
+			font-style: italic
+.btn
+	display: inline-block
+	position: relative
+	text-decoration: none
+	text-transform: uppercase
+	height: 56px
+	color: #fff
+	padding: 0 60px 0 30px
+	font-size: 15px
+	font-weight: 400
+	line-height: 56px
+	border: 2px solid #fff
+	background-color: transparent
+	border-radius: 3px
+	cursor: pointer
+	transition: all .5s linear
+	&::after
+		font-family: FontAwesome
+		content: '\f0ed'
+		position: absolute
+		top: -2px
+		left: 75%
+	&:hover
+		background-color: #fff
+		color: #000
+		border-bottom: 4px solid #ede
+		&::after
+			color: #000
+	&:active
+		background-color: #ede
+		border-color: #ede 
+	&_green
+		border-color: #14af8f
+		color: #14af8f
+		&::after
+			font-family: FontAwesome
+			content: '\f003'
+			position: absolute
+			top: -2px
+			left: 75%
+		&:hover
+			border-color: #474e5d
+			border-bottom: 4px solid #61c0e7
+			background-color: #474e5d
+		&:active
+			background-color: #61c0e7
+			border-color: #61c0e7
+	&_pink
+		color: #ea4c89
+		border-color: #ea4c89
+		&::after
+			left: 80%
+			content: '\f17d'
+		&:hover
+			border-color: #474e5d	
+			border-bottom: 4px solid #61c0e7
+			background-color: #474e5d
+		&:active
+			background-color: #61c0e7
+			border-color: #61c0e7
+	&_see
+		&::after
+			left: 80%
+			content: '\f0fc'
+
+
+.longwinded-section
+	padding: 140px 0
+	background-color: #f4f4f4
+	background-image: url("../img/longwinded-bg.png")
+	background-repeat: no-repeat
+	background-position: right 160px
+
+.longwinded
+	max-width: 590px
+	text-align: left
+	&__title
+		margin: 0
+			bottom: 30px
+		font-size: 40px
+		line-height: 56px
+		font-weight: 300
+		color: #545454
+	&__text
+		position: relative
+		margin: 0
+			bottom: 30px
+		font-size: 16px
+		line-height: 26px
+		font-weight: 400
+		color: #7e7e7e
+		&_decorated
+			font-style: italic
+			margin-left: 24px
+			margin-bottom: 64px
+			&::before
+				position: absolute
+				content: ''
+				top: 5px
+				left: -24px
+				height: 100%
+				width: 6px
+				background-color: #4eacdd
+
+.get-section
+	padding: 100px 0
+	background-color: #fff
+	background-image: url("../img/get-bg.png")
+	background-repeat: no-repeat
+	background-position: left 146px
+	&__get
+		float: right
+
+.get
+	text-align: left
+	max-width: 440px
+	&__title
+		margin: 0
+			bottom: 22px
+		font-size: 40px
+		line-height: 56px
+		font-weight: 300
+		color: #545454
+	&__text
+		color: #7e7e7e
+		font-size: 16px
+		line-height: 26px
+		font-weight: 400
+		margin-bottom: 50px
+		&_decorated
+			color: #474e5d
+			font-style: italic
+			margin: 0
+			margin-bottom: 26px
+
+.see-section
+	padding: 94px 0
+	background-color: #13c1ac
+
+.see
+	text-align: center
+	&__title
+		margin: 0
+		margin-bottom: 34px
+		color: #fff
+		font-size: 40px
+		line-height: 56px
+		font-weight: 400
+		text-transform: capitalize
+		letter-spacing: 1px
+
+.social-section
+	padding: 240px 0
+	background-color: #f4f4f4
+
+.social
+	&__icons
+		margin: 0 auto
+		margin-bottom: 67px
+		text-align: center
+		max-width: 345px
+		font-size: 0
+	&__link
+		display: inline-block
+		vertical-align: top
+		width: 60px
+		height: 60px
+		border: #545454 solid 2px
+		border-radius: 50%
+		margin-right: 35px
+		transition: all .5s linear
+		&:hover .social__item
+			color: #f4f4f4
+		&:hover
+			background-color: #545454
+		&:nth-child(4n)
+			margin-right: 0
+	&__item
+		font-size: 24px
+		line-height: 60px
+		color: #545454
+	&__news-sub
+		text-align: center
+	&__label
+		color: #545454
+		font-weight: 600
+		font-style: italic
+		font-size: 16px
+		line-height: 26px
+		text-transform: uppercase
+		margin-right: 25px
+		// &::before
+		// 	position: absolute
+		// 	font-family: FontAwesome
+		// 	content: '\f003'
+		// 	top: 0
+		// 	left: 0
+		// 	color: red
+	&__email
+		width: 220px
+		height: 44px
+		border: none
+		outline: none
+		font-family: $default-font
+		font-size: 14px
+		font-weight: 600
+		font-style: italic
+		color: #d3d3d3
+		background-color: #fff
+		border-radius: 5px
+		padding: 0 52px 0 20px
+		background-image: url("../img/input-email.png")
+		background-repeat: no-repeat
+		background-position: 90% 48%
+		@include placeholder
+			font-family: $default-font
+			color: #d3d3d3
+			font-size: 14px
+			font-weight: 600
+			font-style: italic
+
+.footer
+	padding: 48px 0 100px
+	background-color: #fff
+	position: relative
+
+.footer-text
+	&__info
+		text-align: center
+		color: #545454
+		font-weight: 400
+		font-size: 12px
+		line-height: 15px
+		font-style: italic
+		&_copy
+			color: #545454
+			font-style: normal
+	&__link
+		text-decoration: none
+		color: #6dc5ea
+		font-weight: 400
+		font-style: normal
+		&:hover
+			text-decoration: underline
+
+.footer-scroll
+	display: inline-block
+	position: absolute
+	top: 49%
+	left: 50%
+	margin-left: -21px
+	width: 42px
+	height: 42px
+	background-color: #f4f4f4
+	text-align: center
+	border-radius: 5px
+	&__icon
+		line-height: 42px
+		font-size: 26px
+		color: #545454
+
+
+@import "media"
